@@ -1,51 +1,27 @@
 <!DOCTYPE html>
-<div>
+
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-    body {font-family: Arial, Helvetica, sans-serif;}
-    form {border: 3px solid #f1f1f1;}
-
-
-
-      button {
-      background-color: #4CAF50;
-      color: white;
-      padding: 14px 20px;
-      margin: 8px 0;
-      border: none;
-      cursor: pointer;
-      width: 100%;
-    }
-
-    button:hover {
-      opacity: 0.8;
-    }
-
-
-
     .container {
       height: 300px;
-      width: 40%;
+      width:25%;
       background-color: lightgreen;
       margin-bottom: 25px;
-      border-style: inset;
-      margin-top: 50px;
+      margin-top: 100px;
+      border-style: groove;
+      border-width: 7px;
+      border-color: black;
     }
     body, html {
       height: 100%;
-      margin: 0;
-      background-color: black;
+      background-image: url("/f2..jpg");
     }
-
-
   </style>
 </head>
-
-<div class="bg">
-  <div class="container">
-
-    <h1>Log in</h1>
+ <div class="container">
+  <form>
+    <h1 style="text-align: center">sign in</h1>
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
     <%= f.label :email %><br />
@@ -71,10 +47,9 @@
 
 <%= render "devise/shared/links" %>
 
-    </form>
+ </form>
   </div>
-</div>
-</div>
+
 </body>
 
 </html>

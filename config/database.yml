@@ -22,4 +22,8 @@ test:
 
 production:
   <<: *default
-  database: db/production.sqlite3
+        host:        ec2-54-235-114-242.compute-1.amazonaws.com
+        database:    dfnu5pcl4al617
+        user:        nfecjvfjhaezej
+        port:        5432
+        password:    d8cdafb21f1c1e211654bdf0a5411d059193ca48b9b8efe113f702231a911ed8
