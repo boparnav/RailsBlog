@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<div>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      body {font-family: Arial, Helvetica, sans-serif;}
+      form {border: 3px solid #f1f1f1;}
+
+      input[type=text]{
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+
+      }
+
+      input[type=password]{
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: inherit;
+
+      }
+
+      button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+      }
+
+      button:hover {
+        opacity: 0.8;
+      }
+
+
+
+      .container {
+        height: 500px;
+        width: 50%;
+        background-color: lightgreen;
+        margin-bottom: 25px;
+        border-style: inset;
+        margin-top: 50px;
+      }
+      body, html {
+        height: 100%;
+        margin: 0;
+        background-color: black;
+      }
+    </style>
+  </head>
+
+  <div class="container"><H2>Update Your Post</H2>
+  <%=form_for @post do |f| %>
+    <p>
+      <%= f.label :title %><br>
+      <%= f.text_field :title %>
+    </p>
+  <p>
+    <%= f.label :Author %><br>
+    <%= f.text_field :author %>
+
+    </p>
+  <p>
+    <%= f.label :Description %><br>
+    <%= f.text_field :description %>
+
+  </p>
+
+  <p>
+    <%= f.submit :"Update Post" %><br>
+
+
+  </p>
+
+<%end %>
+    </form>
+  </div>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style>
+    .row.content {height: 500px}
+    .sidenav {
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+      .img{
+        width:100%;
+        height:600px;
+      }
+
+  </style>
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">My Health</a>
+    </div>
+
+  </div>
+</nav>
+
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-3 sidenav">
+     <img src="/foodp1.jpg" class="img" >
+    </div>
+
+    <div class="col-sm-9">
+      <h2>Food Healing</h2>
+      <hr>
+      <h3>You are learning about  <%= @result_post.title %></h3>
+
+      <h4>This Blog was written by  <u><%= @result_post.author %></u></h4>
+      <p><%= @result_post.description %></p>
+
+
+      <h2><u>Go Organic</u></h2>
+      <h3>Eat Your Veggies</h3>
+      <p>Certain foods are anti-inflammatories, supporting your body in
+        maintaining an appropriate immune response. Here are some foods you may want to eat more of:</p>
+      <h4>Leafy greens</h4>
+
+      <p>These calcium-rich nutritional powerhouses include kale, mustard greens, collard greens, cabbage, and broccoli.
+        They’re packed with good-for-you vitamins and minerals and can easily be added to smoothies, salads, or stir-fries.
+      </p>
+      <h4>Mushrooms</h4>
+      <p>Fungi have demonstrated some tremendous anti-inflammatory potential. One 2005 study published in Mediators
+        of Inflammation found that mushrooms can promote anticancer activity, the suppression of autoimmune diseases,
+        and aid in allergy relief.</p>
+
+       <h4>Onions</h4>
+      <p>These flavorful veggies have long been touted for their beneficial effects.
+        They contain quercetin, an antioxidant which has been shown to inhibit inflammation-causing leukotrienes,
+        prostaglandins and histamines in both osteoarthritis (OA) and rheumatoid arthritis </p>
+    </div>
+  </div></div>
+</body>
+</html>

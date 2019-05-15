@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<div>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      body {font-family: Arial, Helvetica, sans-serif;}
+      form {border: 3px solid #f1f1f1;}
+
+
+
+      button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+      }
+
+      button:hover {
+        opacity: 0.8;
+      }
+
+
+
+      .container {
+        height: 300px;
+        width: 30%;
+        background-color: lightgreen;
+        margin-bottom: 25px;
+        border-style: inset;
+        margin-top: 50px;
+      }
+      body, html {
+        height: 100%;
+        margin: 0;
+        background-color: black;
+      }
+    </style>
+  </head>
+      <i> <h2 style="color:white;text-align: center;font-family: 'Blackadder ITC';">My Health</h2></i>
+  <div class="container">
+    <h2>Sign up</h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email",class:"form-controller" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "new-password" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Sign up" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>
+    </form>
+  </div>
+</div>
+</body>
+
+</html>
